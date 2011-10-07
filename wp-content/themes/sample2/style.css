@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+	Theme Name: wordpress第一作品
+	Theme URI: http://www.www.www/
+	Author: カサコン
+	Description: シャナがTOP絵のテーマです。トロは見せ掛けなのさ。みゃーみゃー
+*/
+
+/*基本設定*/
+*{
+	margin:0;
+	color:#fff;
+}
+
+a:link { color: #0099ff; text-decoration:none;-webkit-transition: 1s ease-in-out;} 
+a:visited { color: #0066ff; text-decoration:none;-webkit-transition: 1s ease-in-out;} 
+a:active { color: #99ccff; text-decoration:none;}
+a:hover { color: #99ccff;text-decoration:none;}
+
+body{
+	text-align:center;
+	background-image: url(parts/background.png);
+	background-repeat:repeat-x;
+	background-color:#2f2f2f;
+}
+
+/*レイアウト部*/
+#container{
+	width:950px;			/*952px*/
+	margin: 10px auto;
+	text-align:left;
+}
+
+#header{
+	border-bottom:none;
+	padding-bottom:0;
+	background-color:#000;
+}
+
+#header h1{
+	float:left;
+	margin-bottom:5px;
+	padding:5px;
+}
+
+#header h1 a{
+	color:#fff;
+	text-decoration:none;
+}
+
+#header #desc{
+	text-align:right;
+	padding-top:20px;
+	padding-right:10px;
+}
+
+#header p#image{
+	margin-top:10px;
+	clear:both;
+}
+
+#navigation{
+	width:950px;
+	height:30px;
+	background-color:#000;
+}
+
+#navigation li a{
+	display:block;
+	font-size:0.75em;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	border:1px solid #222;
+	border-bottom-color:#000;
+	border-right-color:#000;
+	background-color:#151515;
+}
+#navigation li a:hover{
+	color:#fa0;
+	border:1px solid #000;
+	border-bottom-color:#222;
+	border-right-color:#222;
+}
+#navigation li{
+	float:left;
+	width:120px;
+	height:28px;
+	line-height:30px;
+	list-style-type:none;
+	margin-right:20px;
+}
+#navigation ul{
+	margin:0;
+	padding:0;
+}
+
+#content{
+	float:left;
+	background-color:#1f1f1f;
+}
+
+/*サイドバー部分*/
+#left{
+	float:left;
+	width:220px;	/*240px*/
+	background-color:#1f1f1f;
+	padding: 20px 10px 10px 10px;
+}
+
+#left ul{
+	margin:0;
+	padding:0;
+}
+
+#left li{
+	list-style-type:none;
+}
+
+#left .widget{
+	background-color:#222;
+	padding:15px;
+	margin-bottom:10px;
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+}
+
+#left h2{
+	font-size:0.75em;
+	color:#fff;
+	border-bottom:1px dotted #fff;
+	padding-bottom:5px;
+	margin:0 0 10px;
+}
+
+#left li li{
+	font-size:0.75em;
+	margin-bottom:5px;
+	background-image:url(parts/listicon.png);
+	background-repeat:no-repeat;
+	padding-left:15px;
+}
+
+#left li li a{
+	color:#fff;
+	text-decoration:none;
+}
+
+#left li li a:hover{
+	color:#ff0;
+}
+
+/*左側メインメニュー*/
+#right{
+	float:left;
+	width:690px;		/*710*/
+	padding:10px;
+	background-color:#222;
+}
+
+#right p#pagetitle{
+	font-size:0.875em;
+	font-weight:bold;
+	color:#fff;
+	text-align:center;
+	padding:10px 0;
+	margin-top:10px;
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+}
+
+#footer{
+	clear:both;
+	width:950px;
+	height:50px;
+	text-align:center;
+	background-color:#000;
+	line-height:50px;
+	color:#fff;
+}
+
+.post{
+	border:solid 2px #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+	padding:10px;
+	margin:10px 0;
+	color:#ddd;
+}
+
+.post h2{
+	border-left:10px solid #555;
+	border-bottom:2px dotted #555;
+	margin-bottom:10px;
+	padding-left:5px;
+}
+
+.post h2 a{
+	color:#ff0;
+	text-decoration:none;
+}
+
+.post table{
+	margin:0 auto;
+	border:1px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+}
+
+.post caption{
+	padding-bottom:10px;
+}
+
+.post th{
+	text-align:center;
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+	padding:5px;
+}
+
+.post td{
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+	padding:5px;
+}
+
+address{
+	font-size:0.75em;
+	font-style:normal;
+	font-family:Verdana,sans-serif;
+	margin:0;
+}
+
+p.postinfo{
+	text-align:right;
+	margin:20px 0 10px 0;
+	clear:both;
+}
+
+/*ページリンク*/
+.oldpage{
+	float:left;
+	margin-left:10px;
+}
+
+.newpage{
+	float:right;
+	margin-right:10px;
+}
+
+/*記事内の画像について*/
+.aligncenter{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.alignleft{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+.alignright{
+	float:right;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+
+.post img{
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+}
+
+/*フィード*/
+p.feed{
+	font-size:0.75em;
+	font-family:Verdana, Geneva, sans-serif;
+	padding:5px;
+	margin:25px 0;
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;	
+}
+
+p.feed img{
+	vertical-align:middle;
+	margin-right:8px;
+}
+
+/*コメント*/
+#comments{
+	border:2px solid #333;
+	border-bottom-color:#111;
+	border-right-color:#111;
+	padding:0 18px;
+	margin:40px 0 20px 0;
+}
+
+#comments h3{
+	font-size:0.875em;
+	border-bottom:1px dotted #fff;
+	padding-bottom:3px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#comments p{
+	font-size:0.75em;
+	margin-bottom:10px;
+}
+
+#comments .required{
+	color:#f60;
+}
+
+#comments input,#comments textarea{
+	display:block;
+}
+
+#comments textarea{
+	width:400px;
+	padding:5px;
+}
+
+#comments #author,#email,#url,#comment,#submit{
+	color:#000;
+}
+
+input[type="text"]:focus, textarea:focus {
+   background-color: #ff8;
+   border: 1px solid #f00;
+}
+
+#comments code{
+	display:block;
+	margin-top:5px;
+	font-size:smaller;
+}
+
+#comments ul{
+	margin:0;
+	padding:0;
+}
+
+#comments li.compost{
+	list-style-type:none;
+	border-bottom:1px dotted #fff;
+	margin-bottom:20px;
+}
+
+#comments p.cominfo{
+	text-align:right;
+}
+
+#comments #comfeed a{
+	background-image:url(parts/feed-icon-12x12.png);
+	background-repeat:no-repeat;
+	background-position:0 50%;
+	padding-left:15px;
+	line-height:1em;
+	color:#fff;
+	text-decoration:none;
+}
+
+#comments #comfeed a:hover{
+	color:#ff0;
+}
+
+#comments #comfeed,#trurl{
+	background-color:#111;
+	padding:5px;
+	margin-top:5px;
+	border:1px solid #333;
+	border-bottom-color:#000;
+	border-right-color:#000;
+}
+
+#comments #trurl #track{
+	display:inline;
+	background-color:#222;
+	padding:2px;
+	border:none;
+}
+
+/*固定ページ*/
+div#right.page{
+	width:930px;
+}
+
+/*スライドショー*/
+#slideshow {
+    position:relative;
+    height:260px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}

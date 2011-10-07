@@ -1,0 +1,63 @@
+<div id="content">
+あああああああああああああああああああああああああいいいいいいいいいいいいいいいい
+	<div id="left">	<!-- サイドバー部分 -->
+		<?php dynamic_sidebar(); ?>		<!-- ウィジットエリアを出力する -->
+    <p class="feed">
+    	<img src="<?php bloginfo('template_url'); ?>/parts/feed-icon-28x28.png" alt="*" width="28" height="28">
+    	<a href="<?php bloginfo('rss2_url') ?>">RSS FEED</a>	<!-- RSSフォードのURL -->
+    </p>
+	</div><!--left-->
+	<div id="right">
+  	<?php if(is_category()): ?>		<!-- カテゴリページの時に出力する -->
+  		<p id="pagetitle"><?php single_cat_title(); ?></p>		<!-- カテゴリ名を出力する -->
+    <?php endif; ?>
+    
+    <?php if(is_month()): ?>				<!-- 月別ページの時に出力する -->
+    	<p id="pagetitle"><?php single_month_title(); ?></p>	<!-- 月日を出力する -->
+    <?php endif; ?>
+    
+		<?php if(have_posts()):					//記事ごとにループする
+							while(have_posts()):
+								the_post();
+		?>				
+		<div class="post">		<!-- 記事のタイトルと本文をグループ化する -->
+			<h2>
+      	<a href="<?php the_permalink(); ?>">													<!-- 記事の個別ページのURLを出力 -->
+					<?php the_title(); ?>																			<!-- 記事名 -->
+        </a>
+      </h2>				
+			<?php the_content(); ?>																				<!-- 記事の本文を表示する -->
+      <p class="postinfo">
+				<?php echo get_the_date(); ?>																<!-- 記事の投稿日を出力 -->
+        <?php the_time(); ?>																					<!-- 記事の投稿時間を出力 -->
+        |
+        カテゴリ：<?php the_category(','); ?>												<!-- カテゴリの表示 -->
+        |
+        <a href="<?php comments_link(); ?>">コメント<?php comments_number('(0)','(1)','(%)'); ?></a>	<!-- コメント部分のURLを出力する、コメント数を出力する -->
+      </p>
+		</div><!--post終わり-->
+        	
+		<?php if(is_single()): ?>																				<!-- 個別ページの場合の処理 -->
+		<p class="pagelink">
+			<span class="oldpage"><?php previous_post_link(); ?></span>		<!-- 前の記事へのリンク -->
+			<span class="newpage"><?php next_post_link(); ?></span>				<!-- 次の記事へのリンク -->
+		</p>
+		<?php endif; ?>
+    
+		<?php endwhile; endif; ?>
+        
+      <?php if(is_home() or is_archive()): ?>		<!-- トップページ又はアーカイブ関連のページの場合に中身を出力する -->
+      	<p class="pagelink">
+        	<span class="oldpage">
+          	<?php next_posts_link('&laquo;古い記事'); ?>								<!-- 古い記事のページへのリンクを出力-->
+          </span>
+          <span class="newpage">
+          	<?php previous_posts_link('新しい記事 &raquo;') ?>					<!-- 新しい記事のページへのリンクを出力 -->
+          </span>
+        </p>
+      <?php endif; ?>						<!-- if文終わり -->
+      
+      <?php comments_template(); ?>																		<!-- 投稿フォームの表示 -->
+            
+	</div><!--right終わり-->
+</div><!--content終わり-->
