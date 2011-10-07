@@ -1,5 +1,5 @@
 <div id="content">
-あいうえおかきくけこさしすせそたちつてとなにぬねの
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	<div id="left">	<!-- サイドバー部分 -->
 		<?php dynamic_sidebar(); ?>		<!-- ウィジットエリアを出力する -->
     <p class="feed">
